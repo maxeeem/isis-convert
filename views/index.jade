@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    script(type="text/javascript", src= script)
+  body
+    center
+        h2 Choose file to upload
+        form(enctype="multipart/form-data", action="/", method="POST", onsubmit="return checkSelected(this)")
+            input(name="loadsheets", type="file", multiple)
+            input(type="hidden", name="MAX_FILE_SIZE", value="200000000")
+            div(style="margin-top: 20px;")
+                select(name="brand")
+                    option Brand
+                    option(value="FOX") Fox Shox
+                    option(value="VIS") Vision X
+                // input(type="checkbox", name="DCi")
+                // span DCi &emsp;
+                input(type="submit", value="Submit")
